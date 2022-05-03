@@ -60,7 +60,37 @@ button{
     font-size:18px;
 }
 
+div>img{
+    width:80px;
+    height:80px;
 }
+
+`
+
+export const CartData1=styled.div`
+display:flex;
+justify-content:space-between;
+width:450px;
+height:100px;
+border:1px solid lightgray;
+
+div:nth-of-type(2){
+    flex-grow:1;
+    line-height:10px;
+    margin-right:5%;
+}
+
+div:nth-of-type(1),div:nth-of-type(3){
+    padding:10px;
+}
+
+button{
+    border:none;
+    background:none;
+    color:#f43397;
+    font-size:18px;
+}
+
 div>img{
     width:80px;
     height:80px;
@@ -69,6 +99,15 @@ div>img{
 export const InsideSmall=styled.div`
 display:flex;
 justify-content:space-between;
+button{
+    background:#f9f9f9;
+    height:30px;
+    width:40px;
+}
+div{
+    height:30px;
+    width:20px;
+}
 `
 export const Hidden=styled.div`
 z-index:1;
@@ -79,3 +118,10 @@ position:absolute;
 top:75%;
 ${(props)=>props.val?`display:block;`:`display:none;`}
 `
+export const Updateddetails=styled.div`
+width:452px;
+height:500px;
+border:1px solid red;
+background:white;
+`
+
