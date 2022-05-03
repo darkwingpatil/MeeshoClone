@@ -1,23 +1,31 @@
 import React from 'react'
 import HorizontalLabelPositionBelowStepper from "./Cartstepper"
-import{Cartnav,Tag,Wrapper,SmallBox,CartData,InsideSmall,Hidden} from "../styled"
-import { useSelector } from 'react-redux'
+import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails} from "../styled"
+import { useSelector,useDispatch } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import InfoIcon from '@mui/icons-material/Info';
+import{updatedtotal} from "../../Redux/Cart/Action"
 export const Cart = () => {
-  const state=useSelector((state)=>state.cartdata)
-  const[total,setotal]=React.useState()
+  // const state=useSelector((state)=>state.cartdata)
+  const {cartdata,total}=useSelector((state)=>state)
+  // const[total,setotal]=React.useState()
+  const dispatch=useDispatch()
   const[del,setdel]=React.useState(false)
   const[dis,setdis]=React.useState(false)
-  console.log(state,"in Cart PAGE")
-
-setTimeout(()=>{
-  let sum=0;
-  state.map((ele)=>{
-    sum=sum+ele.rate
-  })
-  setotal(sum)
-},1000)
+  //for updating and setting the cart
+  const[UpdateCart,setupdate]=React.useState({})
+  const [quant,setquant]=React.useState(1)
+  const startUpdate=(ele)=>{
+    setupdate(ele)
+    console.log(UpdateCart,"this is where i'll we updating the data")
+  }
+//   setTimeout(()=>{
+//   let sum=0;
+//   state.map((ele)=>{
+//     sum=sum+ele.rate
+//   })
+// setotal(sum)
+// },1000)
   return (
     <>
     <div>
@@ -32,13 +40,13 @@ setTimeout(()=>{
       <div style={{display:"flex"}}>
         <h3>Cart</h3>
         <hr/>
-        <h3>{state.length} Item</h3>
+        <h3>{cartdata.length} Item</h3>
       </div>
     </SmallBox>
     <Cartnav>
     <div>
       {
-        state.map((ele)=>{
+        cartdata.map((ele)=>{
           return(
             <CartData key={uuidv4()}>
             <div><img src={ele.imgUrl}/></div>
@@ -48,15 +56,15 @@ setTimeout(()=>{
             <p>₹ {ele.rate}</p>
             </div>
             <div>
-              <button>Edit</button>
+              <button onClick={()=>startUpdate(ele)}>Edit</button>
             </div>
             </CartData>
           )
         })
       }
     </div>
-    <hr style={{height:"220px",position:"absolute",right:"45%",top:"-25%"}}/>
-    <div style={{width:"300px",position:"absolute",right:"20%",top:"-30%",lineHeight:"10px"}}>
+    <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/>
+    <div style={{width:"300px",position:"absolute",right:"20%",top:"-20%",lineHeight:"10px"}}>
       <h3 style={{marginRight:"62%"}}>Price Details</h3>
       <InsideSmall >
         <p>Product Charges</p>
@@ -93,6 +101,56 @@ setTimeout(()=>{
       </InsideSmall>
     </div>
     </Cartnav>
+
+    {
+      <Updateddetails>
+            <CartData1>
+            <div><img src={UpdateCart.imgUrl}/></div>
+            <div>
+            <h3>{UpdateCart.type}</h3>
+            <p>₹ {UpdateCart.rate}</p>
+            <span style={{display:"flex",justifyContent:"center"}}><p style={{marginTop:"3%",marginRight:"10px"}}>Size</p>
+            <select style={{height:"50%"}}>
+              <option>--</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+            </span>
+            </div>
+            <div>
+            <InsideSmall className='updatebutton'>
+            <p style={{marginTop:"3%",marginRight:"10px"}}>Qty</p>
+            <button onClick={()=>{
+              setquant((prev)=>{
+                if(prev==1)
+                {
+                  return 1
+                }
+                else
+                {
+                  return prev-1;
+                }
+              })
+            }}>-</button>
+            <div>{quant}</div>
+            <button onClick={()=>setquant(quant+1)}>+</button>
+            </InsideSmall>
+            </div>
+            </CartData1>
+            <div>
+              <h1>total</h1>
+              <h1>{total+(UpdateCart.rate*quant)-UpdateCart.rate}</h1>
+              <button onClick={()=>{
+                let data=total+(UpdateCart.rate*quant)-UpdateCart.rate-50
+                dispatch(updatedtotal(data))
+                setquant(1)
+              }}>Save Changes</button>
+            </div>
+      </Updateddetails>
+    }
    
     </>
 
