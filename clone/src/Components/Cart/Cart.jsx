@@ -1,10 +1,11 @@
 import React from 'react'
 import HorizontalLabelPositionBelowStepper from "./Cartstepper"
-import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails,Savechanges,Close} from "../styled"
+import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails,Savechanges,Close,Address} from "../styled"
 import { useSelector,useDispatch } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import InfoIcon from '@mui/icons-material/Info';
 import{updatedtotal} from "../../Redux/Cart/Action"
+import{Link} from "react-router-dom"
 export const Cart = () => {
   // const state=useSelector((state)=>state.cartdata)
   const {cartdata,total}=useSelector((state)=>state)
@@ -32,7 +33,7 @@ export const Cart = () => {
     <div>
         <Cartnav>
          <Tag>meesho</Tag>
-         <Wrapper><HorizontalLabelPositionBelowStepper/></Wrapper>
+         <Wrapper><HorizontalLabelPositionBelowStepper id={0}/></Wrapper>
        </Cartnav>
     <hr style={{backgroundColor:"lightgray",height: "1px", border: 0,}}/>
     </div>
@@ -65,6 +66,7 @@ export const Cart = () => {
         })
       }
     </div>
+
     <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/>
     <div style={{width:"300px",position:"absolute",right:"20%",top:"-20%",lineHeight:"10px"}}>
       <h3 style={{marginRight:"62%"}}>Price Details</h3>
@@ -102,6 +104,12 @@ export const Cart = () => {
         <p>{total-50}</p>
       </InsideSmall>
     </div>
+    <Address>
+    <Link to={"/cart/address/2"}>
+      Checkout
+    </Link>
+    </Address>
+
     </Cartnav>
 
     {

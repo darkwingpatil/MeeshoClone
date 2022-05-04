@@ -104,19 +104,14 @@ button{
     height:30px;
     width:40px;
 }
-div{
-    height:30px;
-    width:20px;
-}
-
 `
 export const Hidden=styled.div`
-z-index:1;
+
 width:400px;
-height:95px;
-background:white;
+height:200px;
 position:absolute;
-top:75%;
+background:white;
+top:95%;
 ${(props)=>props.val?`display:block;`:`display:none;`}
 `
 export const Updateddetails=styled.div`
@@ -152,3 +147,39 @@ margin-top:10px;
 
 `
 
+export const Address=styled.div`
+height:40px;
+width:300px;
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+position:absolute;
+right:20%;
+bottom:0%;
+`
+export const AddressBox=styled.div`
+height:530px;
+width:400px;
+border:1px solid lightgray;
+margin:auto;
+
+`
+export const AddressBoxButton=styled.button`
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+height:40px;
+width:90%;
+
+`
+
+export const AddressAll=styled.div`
+.Bucket{
+    position:absolute;
+    right:0%;
+}
+`

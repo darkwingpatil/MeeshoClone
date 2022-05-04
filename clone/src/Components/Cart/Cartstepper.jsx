@@ -11,10 +11,10 @@ const steps = [
   'Summary',
 ];
 
-export default function HorizontalLabelPositionBelowStepper() {
+export default function HorizontalLabelPositionBelowStepper({id}) {
   return (
     <Box sx={{ width: '100%' }}>
-      <Stepper activeStep={0} alternativeLabel>
+      <Stepper activeStep={id} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
             <StepLabel>{label}</StepLabel>
