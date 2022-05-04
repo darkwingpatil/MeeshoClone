@@ -108,6 +108,7 @@ div{
     height:30px;
     width:20px;
 }
+
 `
 export const Hidden=styled.div`
 z-index:1;
@@ -120,8 +121,34 @@ ${(props)=>props.val?`display:block;`:`display:none;`}
 `
 export const Updateddetails=styled.div`
 width:452px;
-height:500px;
+height:673px;
 border:1px solid red;
 background:white;
+position:absolute;
+top:0%;
+right:0%;
+${(props)=>props.val?`
+display:none`:`dispaly:block`}
+`
+export const Savechanges=styled.button`
+width:100%;
+height:50px;
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+position:absolute;
+right:0%;
+bottom:0%;
+
+`
+export const Close=styled.button`
+border:none;
+background:none;
+color:black;
+font-size:18px;
+margin-top:10px;
+
 `
 
