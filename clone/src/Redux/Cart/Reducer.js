@@ -3,7 +3,7 @@ import{Loaddata,Savedata} from "../../utils/localstorage"
 
 const initstate={
     cartdata:Loaddata("cart")||[],
-    total:Loaddata("total")||0
+    total:Loaddata("total")||0,
 }
 export const Cartreducer=(state=initstate,action)=>{
     console.log(action,"inCartreducer")
@@ -19,18 +19,24 @@ export const Cartreducer=(state=initstate,action)=>{
             return{
                 ...state,
                 cartdata:update,
-                total:sum
+                total:sum,
             }
         }
         case Updatedtotal:{
             const currdata=Loaddata("cart")
             console.log(currdata,"inupdatereducer")
-            let sum=action.payload;
+            currdata.map((ele)=>{
+                if(ele.id==action.payload.id)
+                {
+                    ele.qty=action.payload.quant;
+                }
+            })
+            let sum=action.payload.data;
             Savedata("total",sum)
             return{
                 ...state,
                 cartdata:currdata,
-                total:sum
+                total:sum,
             }
         }
         

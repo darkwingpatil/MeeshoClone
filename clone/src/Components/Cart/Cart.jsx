@@ -1,6 +1,6 @@
 import React from 'react'
 import HorizontalLabelPositionBelowStepper from "./Cartstepper"
-import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails} from "../styled"
+import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails,Savechanges,Close} from "../styled"
 import { useSelector,useDispatch } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import InfoIcon from '@mui/icons-material/Info';
@@ -15,6 +15,7 @@ export const Cart = () => {
   //for updating and setting the cart
   const[UpdateCart,setupdate]=React.useState({})
   const [quant,setquant]=React.useState(1)
+  const[ishidden,setHidden]=React.useState(true)
   const startUpdate=(ele)=>{
     setupdate(ele)
     console.log(UpdateCart,"this is where i'll we updating the data")
@@ -56,7 +57,8 @@ export const Cart = () => {
             <p>₹ {ele.rate}</p>
             </div>
             <div>
-              <button onClick={()=>startUpdate(ele)}>Edit</button>
+              <button onClick={()=>{startUpdate(ele)
+              setHidden(false)}}>Edit</button>
             </div>
             </CartData>
           )
@@ -103,7 +105,14 @@ export const Cart = () => {
     </Cartnav>
 
     {
-      <Updateddetails>
+      <Updateddetails val={ishidden}>
+        <InsideSmall>
+          <p style={{fontWeight:"bold",paddingLeft:"10px"}}>EDIT ITEM</p>
+          <Close onClick={()=>{
+            setquant(1)
+            setHidden(true)
+          }}>X</Close>
+        </InsideSmall>
             <CartData1>
             <div><img src={UpdateCart.imgUrl}/></div>
             <div>
@@ -137,18 +146,24 @@ export const Cart = () => {
             }}>-</button>
             <div>{quant}</div>
             <button onClick={()=>setquant(quant+1)}>+</button>
-            </InsideSmall>
+            </InsideSmall >
             </div>
             </CartData1>
+            <InsideSmall style={{border:"1px solid lightgray"}}>
+              <h3 style={{marginLeft:"10px"}}>Total Price</h3>
+              <h3 style={{marginRight:"10px"}}>{total+(UpdateCart.rate*quant)-UpdateCart.rate}</h3>
+            </InsideSmall>
             <div>
-              <h1>total</h1>
-              <h1>{total+(UpdateCart.rate*quant)-UpdateCart.rate}</h1>
-              <button onClick={()=>{
+            <Savechanges onClick={()=>{
                 let data=total+(UpdateCart.rate*quant)-UpdateCart.rate-50
-                dispatch(updatedtotal(data))
+                console.log(UpdateCart.id,"here it is")
+                let id=UpdateCart.id
+                dispatch(updatedtotal({data,quant,id}))
                 setquant(1)
-              }}>Save Changes</button>
+                setHidden(true)
+              }}>Save Changes</Savechanges>
             </div>
+
       </Updateddetails>
     }
    
