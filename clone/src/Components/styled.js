@@ -111,7 +111,7 @@ width:400px;
 height:200px;
 position:absolute;
 background:white;
-top:95%;
+top:113%;
 ${(props)=>props.val?`display:block;`:`display:none;`}
 `
 export const Updateddetails=styled.div`
@@ -157,7 +157,7 @@ border:none;
 border-radius:5px;
 position:absolute;
 right:20%;
-bottom:0%;
+bottom:26%;
 `
 export const AddressBox=styled.div`
 height:530px;
@@ -182,4 +182,60 @@ export const AddressAll=styled.div`
     position:absolute;
     right:0%;
 }
+`
+export const Paymentdiv=styled.div`
+height:200px;
+width:500px;
+border:1px solid lightgray;
+position:absolute;
+left:17%;
+top:18%;
+`
+export const Cod=styled.div`
+width:100%;
+height:50px;
+background:#e7eeff;
+align-items:center;
+display:flex;
+justify-content:space-between;
+`
+export const Reselling=styled.div`
+width:100%;
+height:100px;
+align-items:center;
+display:flex;
+justify-content:space-between;
+`
+export const ResellingButton=styled.button`
+border:none;
+border-radius:20px;
+font-size:20px;
+margin-right:5px;
+`
+
+export const Marginaldata=styled.h3`
+position:absolute;
+left:-2%;
+bottom:-100%;
+${(props)=>props.show?`display:block`:`display:none`};
+${(props)=>(props.val>=0)?`
+color:green`:`color:red`}
+`
+export const HiddMargin=styled.div`
+${(prop)=>prop.val?`display:block`:`
+display:none`};
+`
+
+export const AddressBoxButton1=styled.button`
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+height:40px;
+position:absolute;
+width:22%;
+right:20%;
+bottom:35%;
+
 `
