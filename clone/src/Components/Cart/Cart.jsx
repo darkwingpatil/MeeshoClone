@@ -5,11 +5,12 @@ import { useSelector,useDispatch } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import InfoIcon from '@mui/icons-material/Info';
 import{updatedtotal} from "../../Redux/Cart/Action"
-import{Link} from "react-router-dom"
+import{Link,useNavigate} from "react-router-dom"
+import{hidenavbar} from "../../Redux/Cart/Action"
 // "/cart/address/2"
 
-export const Cart = ({path,str,id}) => {
-  console.log(path,"kya dekha")
+export const Cart = ({path,str,id,show,istrue}) => {
+  console.log(istrue,"kya dekha")
   // const state=useSelector((state)=>state.cartdata)
   const {cartdata,total}=useSelector((state)=>state)
   // const[total,setotal]=React.useState()
@@ -20,6 +21,8 @@ export const Cart = ({path,str,id}) => {
   const[UpdateCart,setupdate]=React.useState({})
   const [quant,setquant]=React.useState(1)
   const[ishidden,setHidden]=React.useState(true)
+  const x11=Number(show)||0;
+  const navigate=useNavigate()
   const startUpdate=(ele)=>{
     setupdate(ele)
     console.log(UpdateCart,"this is where i'll we updating the data")
@@ -97,22 +100,30 @@ export const Cart = ({path,str,id}) => {
       </InsideSmall>
       <InsideSmall>
         <p>1st Order Discount <InfoIcon onMouseEnter ={()=>setdis(!dis)} fontSize="small"/></p>
+        <div style={{position:"absolute",top:"72%"}}>{show?<p>MarginPrice +  ₹{show} Added!</p>:""}</div>
         <Hidden val={dis}>
           <h3>1ST ORDER DISCOUNT</h3>
           <hr/>
           <p>1st Order Discount: 15% Discount (Max. ₹50)</p>
+          
         </Hidden>
         <p>- ₹50</p>
       </InsideSmall>
       <InsideSmall>
         <h3>Order Total</h3>
-        <p>{total-50}</p>
+        <p>{total-50+x11}</p>
       </InsideSmall>
     </div>
     <Address>
-    <Link to={path?path:"/cart/address/2"}>
+    <button  onClick={()=>{
+          if(istrue==true)
+          {
+            dispatch(hidenavbar(true))
+          }
+      navigate(path?path:"/cart/address/2")
+  }} style={{border:"none",background:"none",color:"white"}}>
       {str?str:"Checkout"}
-    </Link>
+    </button>
     </Address>
 
     </Cartnav>

@@ -1,4 +1,4 @@
-import {CurrCart,Updatedtotal,Marginadd,Addressdata} from "./Actiontypes"
+import {CurrCart,Updatedtotal,Marginadd,Addressdata,HideNavbar} from "./Actiontypes"
 
 
 
@@ -26,6 +26,13 @@ export const addressadd=(payload)=>{
 export const marginadd=(payload)=>{
     return{
         type:Marginadd,
+        payload
+    }
+}
+
+export const hidenavbar=(payload)=>{
+    return{
+        type:HideNavbar,
         payload
     }
 }

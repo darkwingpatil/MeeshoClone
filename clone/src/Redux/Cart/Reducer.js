@@ -1,11 +1,12 @@
-import {CurrCart,Updatedtotal,Marginadd,Addressdata} from "./Actiontypes"
+import {CurrCart,Updatedtotal,Marginadd,Addressdata,HideNavbar} from "./Actiontypes"
 import{Loaddata,Savedata} from "../../utils/localstorage"
 
 const initstate={
     cartdata:Loaddata("cart")||[],
     total:Loaddata("total")||0,
     margin:Loaddata("margin")||0,
-    address:Loaddata("address")||{}
+    address:Loaddata("address")||{},
+    navbar:true
 }
 export const Cartreducer=(state=initstate,action)=>{
     console.log(action,"inCartreducer")
@@ -25,7 +26,8 @@ export const Cartreducer=(state=initstate,action)=>{
                 cartdata:update,
                 total:sum,
                 margin:mar,
-                address:add
+                address:add,
+                navbar:false
             }
         }
         case Updatedtotal:{
@@ -46,7 +48,8 @@ export const Cartreducer=(state=initstate,action)=>{
                 cartdata:currdata,
                 total:sum,
                 margin:mar,
-                address:add
+                address:add,
+                navbar:false
             }
         }
         case Marginadd:{
@@ -60,7 +63,8 @@ export const Cartreducer=(state=initstate,action)=>{
                 cartdata:currdata,
                 total:sum,
                 margin:mar,
-                address:add
+                address:add,
+                navbar:false
             }
         }
         case Addressdata:{
@@ -74,7 +78,22 @@ export const Cartreducer=(state=initstate,action)=>{
                 cartdata:currdata,
                 total:sum,
                 margin:mar,
-                address:add
+                address:add,
+                navbar:false
+            }
+        }
+        case HideNavbar:{
+            const currdata=Loaddata("cart")
+            let sum=Loaddata("total")
+            let mar=Loaddata("margin")
+            let add=Loaddata("address")
+            return{
+                ...state,
+                cartdata:currdata,
+                total:sum,
+                margin:mar,
+                address:add,
+                navbar:action.payload
             }
         }
 

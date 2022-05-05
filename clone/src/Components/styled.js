@@ -111,7 +111,7 @@ width:400px;
 height:200px;
 position:absolute;
 background:white;
-top:113%;
+top:120%;
 ${(props)=>props.val?`display:block;`:`display:none;`}
 `
 export const Updateddetails=styled.div`
@@ -157,7 +157,7 @@ border:none;
 border-radius:5px;
 position:absolute;
 right:20%;
-bottom:-13%;
+bottom:-28%;
 `
 export const AddressBox=styled.div`
 height:530px;
@@ -277,4 +277,13 @@ div>img{
     width:80px;
     height:80px;
 }
+`
+export const Summarypay=styled.div`
+display:flex;
+border:1px solid lightgray;
+height:50px;
+width:450px;
+position:absolute;
+left:18%;
+top:105%;
 `
