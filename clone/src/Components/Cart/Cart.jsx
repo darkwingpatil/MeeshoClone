@@ -1,12 +1,15 @@
 import React from 'react'
 import HorizontalLabelPositionBelowStepper from "./Cartstepper"
-import{Cartnav,Tag,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails,Savechanges,Close,Address} from "../styled"
+import{Cartnav,Tag,Carthr,Wrapper,SmallBox,CartData,CartData1,InsideSmall,Hidden,Updateddetails,Savechanges,Close,Address} from "../styled"
 import { useSelector,useDispatch } from 'react-redux'
 import { v4 as uuidv4 } from 'uuid';
 import InfoIcon from '@mui/icons-material/Info';
 import{updatedtotal} from "../../Redux/Cart/Action"
 import{Link} from "react-router-dom"
-export const Cart = () => {
+// "/cart/address/2"
+
+export const Cart = ({path,str,id}) => {
+  console.log(path,"kya dekha")
   // const state=useSelector((state)=>state.cartdata)
   const {cartdata,total}=useSelector((state)=>state)
   // const[total,setotal]=React.useState()
@@ -21,6 +24,7 @@ export const Cart = () => {
     setupdate(ele)
     console.log(UpdateCart,"this is where i'll we updating the data")
   }
+  //"/cart/address/3/payment/summary"
 //   setTimeout(()=>{
 //   let sum=0;
 //   state.map((ele)=>{
@@ -33,7 +37,7 @@ export const Cart = () => {
     <div>
         <Cartnav>
          <Tag>meesho</Tag>
-         <Wrapper><HorizontalLabelPositionBelowStepper id={0}/></Wrapper>
+         <Wrapper><HorizontalLabelPositionBelowStepper id={id?id:0}/></Wrapper>
        </Cartnav>
     <hr style={{backgroundColor:"lightgray",height: "1px", border: 0,}}/>
     </div>
@@ -67,7 +71,8 @@ export const Cart = () => {
       }
     </div>
 
-    <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/>
+    {/* <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/> */}
+    <Carthr/>
     <div style={{width:"300px",position:"absolute",right:"20%",top:"-20%",lineHeight:"10px"}}>
       <h3 style={{marginRight:"62%"}}>Price Details</h3>
       <InsideSmall >
@@ -91,7 +96,7 @@ export const Cart = () => {
         <p>+ ₹0</p>
       </InsideSmall>
       <InsideSmall>
-        <p>1st Order Discoun <InfoIcon onMouseEnter ={()=>setdis(!dis)} fontSize="small"/></p>
+        <p>1st Order Discount <InfoIcon onMouseEnter ={()=>setdis(!dis)} fontSize="small"/></p>
         <Hidden val={dis}>
           <h3>1ST ORDER DISCOUNT</h3>
           <hr/>
@@ -105,8 +110,8 @@ export const Cart = () => {
       </InsideSmall>
     </div>
     <Address>
-    <Link to={"/cart/address/2"}>
-      Checkout
+    <Link to={path?path:"/cart/address/2"}>
+      {str?str:"Checkout"}
     </Link>
     </Address>
 

@@ -157,7 +157,7 @@ border:none;
 border-radius:5px;
 position:absolute;
 right:20%;
-bottom:26%;
+bottom:-13%;
 `
 export const AddressBox=styled.div`
 height:530px;
@@ -238,4 +238,43 @@ width:22%;
 right:20%;
 bottom:35%;
 
+`
+export const Carthr=styled.hr`
+height:500px;
+position:absolute;
+right:45%;
+top:-18%;
+`
+
+export const CartData2=styled.div`
+display:flex;
+justify-content:space-between;
+width:450px;
+height:180px;
+border:1px solid lightgray;
+position:absolute;
+top:70%;
+left:18%;
+line-height:10px;
+align-items:center;
+
+h3{
+    margin-bottom:20px;
+}
+
+div:nth-of-type(1),div:nth-of-type(2){
+    padding:10px;
+}
+
+button{
+    border:none;
+    background:none;
+    color:#f43397;
+    font-size:18px;
+}
+
+div>img{
+    width:80px;
+    height:80px;
+}
 `

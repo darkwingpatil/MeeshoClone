@@ -4,6 +4,8 @@ import TextField from '@mui/material/TextField';
 import CallIcon from '@mui/icons-material/Call';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
 import{AddressBox,AddressBoxButton} from "../styled"
+import{addressadd} from "../../Redux/Cart/Action"
+import { useDispatch } from 'react-redux';
 import{Link} from "react-router-dom"
 import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
@@ -12,7 +14,7 @@ export default function FormPropsTextFields() {
     const ref1=useRef()
     const ref2=useRef()
     const ref3=useRef()
-
+    const dispatch=useDispatch()
     const navigate=useNavigate()
     const handleChange = (event) => {
       if(event.target.value.length=="")
@@ -107,6 +109,7 @@ export default function FormPropsTextFields() {
           {/* <Link to={"/cart/address/3/payment"}> */}
            <AddressBoxButton onClick={(e)=>{
                e.preventDefault()
+               console.log(obj,"check for store")
                let count=0;
                for(let key in obj)
                {
@@ -128,6 +131,7 @@ export default function FormPropsTextFields() {
                 ref1.current.style.border="none";
                 ref2.current.style.border="none";
                 ref3.current.style.border="none";
+                dispatch(addressadd(obj))
                 navigate("/cart/address/3/payment",{replace:true})
                }
            }} >Save Address and Continue</AddressBoxButton>

@@ -1,4 +1,4 @@
-import {CurrCart,Updatedtotal,Marginadd} from "./Actiontypes"
+import {CurrCart,Updatedtotal,Marginadd,Addressdata} from "./Actiontypes"
 
 
 
@@ -12,6 +12,13 @@ export const currcart=(payload)=>{
 export const updatedtotal=(payload)=>{
     return{
         type:Updatedtotal,
+        payload
+    }
+}
+
+export const addressadd=(payload)=>{
+    return{
+        type:Addressdata,
         payload
     }
 }
