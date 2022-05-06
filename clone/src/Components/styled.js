@@ -157,7 +157,9 @@ border:none;
 border-radius:5px;
 position:absolute;
 right:20%;
-bottom:-28%;
+
+${(props)=>props.length==1?`
+bottom:-170%;`:`bottom:-28%;`}
 `
 export const AddressBox=styled.div`
 height:530px;
@@ -257,7 +259,6 @@ top:70%;
 left:18%;
 line-height:10px;
 align-items:center;
-
 h3{
     margin-bottom:20px;
 }
@@ -286,4 +287,41 @@ width:450px;
 position:absolute;
 left:18%;
 top:105%;
+`
+
+export const Mobile=styled.div`
+width:470px;
+height:600px;
+background:white;
+border:1px solid red;
+border-radius:10px;
+margin:auto; 
+img{
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width:100%;
+}
+h3{
+    font-size:20px;
+    margin:30px;
+    font-weight:bold;
+}`
+
+export const InputsSign=styled.div`
+display:flex;
+gap:10px;`
+
+export const AddressBoxButton3=styled.button`
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+height:40px;
+position:absolute;
+width:25%;
+bottom:20%;
+left:37.5%;
+
+
 `

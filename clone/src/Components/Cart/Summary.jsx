@@ -10,14 +10,14 @@ export const Summary = ({given,vat,ischeck}) => {
   const str1=given||"Place Order"
   const pat=vat||"/cart/address/3/payment/summary/done"
   const {id}=useParams()
-  const {cartdata,total,address,margin}=useSelector((state)=>state)
+  const {cartdata,total,address,margin}=useSelector((state)=>state.cart)
   const navigate=useNavigate()
   console.log(address)
   return (
     <div>
      <Cart id={3} str={str1} path={pat} show={margin} istrue={ischeck}/>
      <h3 style={{position:"absolute",left:"20%",bottom:"30%"}}>Delivery Address</h3>
-     <CartData2>
+     <CartData2 length={cartdata.length}>
        <div>
        <h3>{address.name}</h3>
        <p>{address.houseno} {address.road} {address.city}</p>

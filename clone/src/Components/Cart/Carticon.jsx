@@ -14,7 +14,7 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function CustomizedBadges() {
-    const state=useSelector((state)=>state.cartdata)
+    const state=useSelector((state)=>state.cart.cartdata)
     console.log(state,"in carticon")
   return (
     <IconButton aria-label="cart">

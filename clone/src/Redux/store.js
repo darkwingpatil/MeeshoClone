@@ -1,6 +1,6 @@
-import {legacy_createStore as createStore,applyMiddleware,compose} from "redux"
+import {legacy_createStore as createStore,combineReducers,applyMiddleware,compose} from "redux"
 import{Cartreducer} from "./Cart/Reducer"
-
+import{Authreducer} from "./Profile/Reducer"
 
 const middleware1=(store)=>(next)=>(action)=>{
     next(action)
@@ -17,5 +17,11 @@ const enhancer = composeEnhancers(
   applyMiddleware(middleware1),
   // other store enhancers if any
 );
+const rootReducer=combineReducers(
+  {
+    cart:Cartreducer,
+    auth:Authreducer
+  }
+)
 
-export const store=createStore(Cartreducer,enhancer)
+export const store=createStore(rootReducer,enhancer)
