@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
 import { useSelector } from 'react-redux';
 export default function BasicTextFields({fun}) {
-    const {total} =useSelector((state)=>state)
+    const {total} =useSelector((state)=>state.cart)
   return (
     <Box
       component="form"

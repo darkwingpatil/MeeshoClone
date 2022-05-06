@@ -12,7 +12,7 @@ import{hidenavbar} from "../../Redux/Cart/Action"
 export const Cart = ({path,str,id,show,istrue}) => {
   console.log(istrue,"kya dekha")
   // const state=useSelector((state)=>state.cartdata)
-  const {cartdata,total}=useSelector((state)=>state)
+  const {cartdata,total}=useSelector((state)=>state.cart)
   // const[total,setotal]=React.useState()
   const dispatch=useDispatch()
   const[del,setdel]=React.useState(false)
@@ -114,7 +114,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
         <p>{total+x11}</p>
       </InsideSmall>
     </div>
-    <Address>
+    <Address length={cartdata.length}>
     <button  onClick={()=>{
           if(istrue==true)
           {

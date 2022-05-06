@@ -6,7 +6,7 @@ import { useSelector,useDispatch } from 'react-redux'
 import {currcart} from "../Redux/Cart/Action"
 export const Productdetail = () => {
 const dispatch=useDispatch()
-const state=useSelector((state)=>state)
+const state=useSelector((state)=>state.cart)
 console.log(state,"inpdp")
 
 const clickeddata=(ele)=>{

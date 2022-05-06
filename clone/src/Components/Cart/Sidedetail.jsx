@@ -9,7 +9,7 @@ import{Link} from "react-router-dom"
 
 
 export const Sidedetails=()=>{
-    const {total,cartdata}=useSelector((state)=>state)
+    const {total,cartdata}=useSelector((state)=>state.cart)
     console.log(total,"in sidedetails")
     const[del,setdel]=React.useState(false)
     const[dis,setdis]=React.useState(false)

@@ -10,7 +10,7 @@ import BasicTextFields from "./Margininput"
 import{marginadd} from "../../Redux/Cart/Action"
 export const Payment = () => {
   const dispatch=useDispatch()
-  const {total} =useSelector((state)=>state)
+  const {total} =useSelector((state)=>state.cart)
     const {id} =useParams()
     const navigate=useNavigate()
     const ref1=React.useRef()
