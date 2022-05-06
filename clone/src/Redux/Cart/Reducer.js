@@ -27,7 +27,7 @@ export const Cartreducer=(state=initstate,action)=>{
                 total:sum,
                 margin:mar,
                 address:add,
-                navbar:false
+                navbar:true
             }
         }
         case Updatedtotal:{
