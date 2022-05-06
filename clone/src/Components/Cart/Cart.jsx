@@ -80,7 +80,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
       <h3 style={{marginRight:"62%"}}>Price Details</h3>
       <InsideSmall >
         <p>Product Charges</p>
-        <p>{total}</p>
+        <p>{total+50}</p>
       </InsideSmall>
       <InsideSmall>
         <p>Delivery Charges <InfoIcon onMouseEnter ={()=>setdel(!del)} fontSize="small"/></p>
@@ -111,7 +111,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
       </InsideSmall>
       <InsideSmall>
         <h3>Order Total</h3>
-        <p>{total-50+x11}</p>
+        <p>{total+x11}</p>
       </InsideSmall>
     </div>
     <Address>
