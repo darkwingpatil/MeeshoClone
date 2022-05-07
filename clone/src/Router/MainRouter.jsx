@@ -1,6 +1,9 @@
 import React from "react";
 import {Routes,Route} from "react-router-dom"
-import{Productdetail} from "../Components/Productdetail"
+import{Productdetail} from "../Components/Product"
+import{Mendetail} from "../Components/mens"
+import{Womendetail} from "../Components/Women"
+import{Kidsdetail} from "../Components/kids"
 import{Cart} from "../Components/Cart/Cart"
 import {Address} from "../Components/Cart/Address"
 import { Payment } from "../Components/Cart/Payment";
@@ -13,6 +16,9 @@ export const MainRouter=()=>{
 return(
     <Routes>
         <Route path="/" element={<Productdetail/>}></Route>
+        <Route path="/men" element={<Mendetail/>}></Route>
+        <Route path="/women" element={<Womendetail/>}></Route>
+        <Route path="/kids" element={<Kidsdetail/>}></Route>
         <Route path="/login/*" element={<Login/>}></Route>
         <Route path="/login/:name" element={<Otp/>}></Route>
         <Route path="/cart/*" element={<PrivateRouter><Cart/></PrivateRouter>}></Route>

@@ -325,3 +325,24 @@ left:37.5%;
 
 
 `
+
+export const Profile=styled.div`
+height:200px;
+width:250px;
+margin-left:80%;
+border:1px solid lightgray;
+z-index:4;
+${(props)=>props.see?`
+display:block;`:`
+display:none;`}
+`
+
+export const Profilebutton=styled.button`
+background:#f43397;
+color:white;
+text-align:center;
+border:none;
+border-radius:5px;
+height:40px;
+width:90%;
+`
