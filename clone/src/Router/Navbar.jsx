@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import{Profile,Profilebutton,InputsSign} from "../Components/styled"
 import { useNavigate } from 'react-router-dom'
 import{hidenavbar} from "../Redux/Cart/Action"
-
+import{isAuth} from "../Redux/Profile/Action"
 
 export const Navbar = () => {
   const{navbar}=useSelector((state)=>state.cart)
@@ -45,7 +45,7 @@ export const Navbar = () => {
           </InputsSign>
           {
             auth?
-            <Profilebutton>Logout</Profilebutton>
+            <Profilebutton onClick={()=>dispatch(isAuth(false))}>Logout</Profilebutton>
             :
             <div></div>
           }
