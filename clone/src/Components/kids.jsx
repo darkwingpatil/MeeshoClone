@@ -4,18 +4,18 @@ import{Grid} from "./styled"
 import { v4 as uuidv4 } from 'uuid';
 import { useSelector,useDispatch } from 'react-redux'
 import {currcart} from "../Redux/Cart/Action"
-export const Productdetail = () => {
+export const Kidsdetail = () => {
 const dispatch=useDispatch()
 const state=useSelector((state)=>state.cart)
 console.log(state,"inpdp")
-
+console.log(data,"inpdp now seeing")
 const clickeddata=(ele)=>{
     dispatch(currcart(ele))
 }
   return (
     <Grid>
         {
-            data.mensTshirt.map((ele)=>{
+            data.data.map((ele)=>{
                 return(
                     <div key={uuidv4()}>
                         <img src={ele.imgUrl}/>
