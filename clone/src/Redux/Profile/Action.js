@@ -1,4 +1,4 @@
-import {IsAuth,StoreNum} from "./Actiontypes"
+import {IsAuth,StoreNum,ShowLogin} from "./Actiontypes"
 
 export const storeNum=(payload)=>{
     return{
@@ -10,6 +10,13 @@ export const storeNum=(payload)=>{
 export const isAuth=(payload)=>{
     return{
         type:IsAuth,
+        payload
+    }
+}
+
+export const showlogin=(payload)=>{
+    return{
+        type:ShowLogin,
         payload
     }
 }

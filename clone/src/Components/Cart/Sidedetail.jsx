@@ -16,7 +16,7 @@ export const Sidedetails=()=>{
 
     return(
     <div style={{width:"300px",position:"absolute",right:"20%"}}>
-      <h3 style={{marginRight:"62%"}}>Price Details</h3>
+      <h4 style={{marginRight:"64%",width:"150px"}}>Price Details</h4>
       <InsideSmall >
         <p>Product Charges</p>
         <p>{total}</p>

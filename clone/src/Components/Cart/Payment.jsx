@@ -59,7 +59,7 @@ export const Payment = () => {
      <h3>Payment Method</h3>
      <Cod>
        <div style={{display:"flex"}}>
-         <CurrencyRupeeIcon color='success' style={{position:"absolute",top:"38%"}}/>
+         <CurrencyRupeeIcon color='success' style={{position:"absolute",top:"31%"}}/>
          <h3 style={{position:"absolute",top:"28%",left:"5%"}}>Cash on Delivery</h3>
        </div>
        <div>

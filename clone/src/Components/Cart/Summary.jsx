@@ -16,7 +16,7 @@ export const Summary = ({given,vat,ischeck}) => {
   return (
     <div>
      <Cart id={3} str={str1} path={pat} show={margin} istrue={ischeck}/>
-     <h3 style={{position:"absolute",left:"20%",bottom:"30%"}}>Delivery Address</h3>
+     <h4 style={{position:"absolute",left:"20%",bottom:"30%"}}>Delivery Address</h4>
      <CartData2 length={cartdata.length}>
        <div>
        <h3>{address.name}</h3>
@@ -32,11 +32,11 @@ export const Summary = ({given,vat,ischeck}) => {
          </button>
        </div>
      </CartData2>
-     <h3 style={{position:"absolute",left:"20%",bottom:"-5%"}}>Payment Mode</h3>
+     <h4 style={{position:"absolute",left:"20%",bottom:"-5%"}}>Payment Mode</h4>
      <Summarypay>
        <div style={{display:"flex"}}>
          <CurrencyRupeeIcon color='success' style={{position:"absolute",top:"40%"}}/>
-         <h3 style={{position:"absolute",top:"0%",left:"10%"}}>Cash on Delivery</h3>
+         <h3 style={{position:"absolute",top:"20%",left:"10%"}}>Cash on Delivery</h3>
        </div>
      </Summarypay>
     </div>

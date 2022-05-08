@@ -1,4 +1,5 @@
 import React from 'react'
+import '../App.css';
 import{Link} from "react-router-dom"
 import CustomizedBadges from "../Components/Cart/Carticon"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
@@ -8,6 +9,10 @@ import{Profile,Profilebutton,InputsSign} from "../Components/styled"
 import { useNavigate } from 'react-router-dom'
 import{hidenavbar} from "../Redux/Cart/Action"
 import{isAuth} from "../Redux/Profile/Action"
+import  Navbar1  from '../Components/Signup/Navbar1';
+import{Productdetail} from "../Components/Product"
+import{showlogin} from "../Redux/Profile/Action"
+// import "../../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 export const Navbar = () => {
   const{navbar}=useSelector((state)=>state.cart)
@@ -18,16 +23,16 @@ export const Navbar = () => {
   if(navbar==true)
   return (
     <div>
-        <Link to={"/"} onMouseEnter={()=>setsign(false)}>Products</Link>
+        <Link to={"/"} onMouseEnter={()=>setsign(false)}></Link>
         {/* <Link to={"/login"}>Login</Link> */}
-        <button style={{border:"none",background:"none"}} onMouseEnter={()=>setsign(true)}  ><PermIdentityIcon/></button>
+        <button style={{border:"none",background:"none"}} onMouseEnter={()=>{setsign(true)
+        dispatch(showlogin(true))}}  ><PermIdentityIcon/></button>
         <button style={{border:"none",background:"none"}} onClick={()=>{
           dispatch(hidenavbar(false))
           navigate("/cart")
           
         }}onMouseEnter={()=>setsign(false)}><CustomizedBadges/></button>
-
-        <Profile see={showsign} onMouseLeave={()=>setsign(false)}>
+{/* <Profile see={showsign} onMouseLeave={()=>setsign(false)}>
           <h3 style={{textAlign:"left",marginLeft:"5px"}}>Hello User</h3>
           <p style={{textAlign:"left",marginLeft:"5px"}}>{auth?`+91 ${number}`:"To access your Meesho account"}</p>
           {
@@ -49,9 +54,9 @@ export const Navbar = () => {
             :
             <div></div>
           }
-        </Profile>
-        
+        </Profile> */}
     </div>
+    
   )
   return(
     <div></div>

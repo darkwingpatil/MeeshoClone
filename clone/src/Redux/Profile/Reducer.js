@@ -1,10 +1,11 @@
 import { style } from "@mui/system"
-import {IsAuth,StoreNum} from "./Actiontypes"
+import {IsAuth,StoreNum,ShowLogin} from "./Actiontypes"
 import{Loaddata,Savedata} from "../../utils/localstorage"
 
 const InitState={
     auth:Loaddata("auth")||false,
-    number:Loaddata("number")||0
+    number:Loaddata("number")||0,
+    showlog:false
 }
 
 export const Authreducer=(state=InitState,action)=>{
@@ -16,7 +17,8 @@ export const Authreducer=(state=InitState,action)=>{
             return{
                 ...state,
                 auth:action.payload,
-                number:val
+                number:val,
+                showlog:false
             }
         }
         case StoreNum:{
@@ -25,8 +27,19 @@ export const Authreducer=(state=InitState,action)=>{
             return{
                 ...state,
                 auth:val,
-                number:action.payload
+                number:action.payload,
+                showlog:false
 
+            }
+        }
+        case ShowLogin:{
+            let val1=Loaddata("auth")
+            let val2=Loaddata("number")
+            return{
+                ...state,
+                auth:val1,
+                number:val2,
+                showlog:action.payload
             }
         }
         default:{

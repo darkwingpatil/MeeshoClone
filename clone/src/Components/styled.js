@@ -24,12 +24,23 @@ export const Grid=styled.div`
 display:grid;
 grid-template-columns: repeat(4,1fr);
 gap:10px;
+position:relative;
 
 div>img{
     width:300px;
     height:300px;
 }
 `
+
+export const Alldone=styled.div`
+position:relative;
+.hogya{
+    position:absolute;
+    background:white;
+    right:5%;
+}`
+
+
 export const SmallBox=styled.div`
 width:10%;
 margin-left:20%;
@@ -39,7 +50,7 @@ export const CartData=styled.div`
 display:flex;
 justify-content:space-between;
 width:450px;
-height:100px;
+height:auto;
 margin-left:55%;
 border:1px solid lightgray;
 
@@ -104,6 +115,7 @@ button{
     height:30px;
     width:40px;
 }
+
 `
 export const Hidden=styled.div`
 
@@ -162,7 +174,7 @@ ${(props)=>props.length==1?`
 bottom:-170%;`:`bottom:-28%;`}
 `
 export const AddressBox=styled.div`
-height:530px;
+height:auto;
 width:400px;
 border:1px solid lightgray;
 margin:auto;
@@ -237,7 +249,7 @@ border-radius:5px;
 height:40px;
 position:absolute;
 width:22%;
-right:20%;
+right:17.5%;
 bottom:35%;
 
 `
@@ -256,7 +268,7 @@ height:180px;
 border:1px solid lightgray;
 position:absolute;
 top:70%;
-left:18%;
+left:15%;
 line-height:10px;
 align-items:center;
 h3{
@@ -285,7 +297,7 @@ border:1px solid lightgray;
 height:50px;
 width:450px;
 position:absolute;
-left:18%;
+left:15%;
 top:105%;
 `
 
@@ -329,9 +341,8 @@ left:37.5%;
 export const Profile=styled.div`
 height:200px;
 width:250px;
-margin-left:80%;
-border:1px solid lightgray;
-z-index:4;
+// margin-left:80%;
+z-index:2;
 ${(props)=>props.see?`
 display:block;`:`
 display:none;`}
@@ -345,4 +356,24 @@ border:none;
 border-radius:5px;
 height:40px;
 width:90%;
+`
+
+export const Childdel=styled.div`
+height:25px;
+width:100px;
+font-size:12px;
+background:lightgray;
+border-radius:20px;
+margin:auto;
+margin-top:2%;
+`
+
+export const Chilrating=styled.div`
+height:35px;
+width:100px;
+font-size:20px;
+color:white;
+background:#038d63;
+border-radius:20px;
+
 `
