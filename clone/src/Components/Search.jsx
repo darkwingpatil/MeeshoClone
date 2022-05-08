@@ -17,8 +17,8 @@ export const SearchProduct =() => {
 
         {data.jeans.filter((el)=>{
           if(searchTerm == ""){
-            return el
-          }
+            return;
+        }
           else if(el.type.toLowerCase().includes(searchTerm.toLowerCase())){
             return el;
           }
@@ -28,8 +28,8 @@ export const SearchProduct =() => {
 
         {data.data.filter((el)=>{
           if(searchTerm == ""){
-            return el
-          }
+            return;
+        }
           else if(el.type.toLowerCase().includes(searchTerm.toLowerCase())){
             return el;
           }
@@ -39,8 +39,8 @@ export const SearchProduct =() => {
 
         {data.mensTshirt.filter((el)=>{
           if(searchTerm == ""){
-            return el
-          }
+            return;
+        }
           else if(el.type.toLowerCase().includes(searchTerm.toLowerCase())){
             return el;
           }
