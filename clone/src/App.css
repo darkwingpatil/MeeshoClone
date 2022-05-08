@@ -1,6 +1,6 @@
+
 .App {
   text-align: center;
-  
 }
 
 .App-logo {
@@ -23,11 +23,9 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  
 }
 
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -36,4 +34,41 @@
   to {
     transform: rotate(360deg);
   }
+}
+.dropdown-item1{
+  color: rgb(244, 51, 151);
+}
+#navbarNavDropdown>div{
+  margin-right: 40px;
+}
+#jennystyle{
+  margin-left: 60px;
+  
+}
+#navbarDropdownMenuLink{
+  margin-left: 60px;
+}
+#mensstyle{
+  font-size: 23px;
+  text-decoration:  4px solid;
+
+}
+#mensstyle:hover{
+ color: rgb(244, 51, 151);
+ /* text-decoration: underline; */
+ text-decoration:  4px solid;
+
+}
+#navbarDropdownMenuLink{
+  font-size: 23px;
+  text-decoration:  4px solid;
+
+}
+#navbarDropdownMenuLink:hover{
+  color: rgb(244, 51, 151);
+  text-decoration: underline;
+  text-decoration: underline 4px solid;
+}
+#navbarNavDropdown{
+  border: 1px solid #e0dcdc;
 }

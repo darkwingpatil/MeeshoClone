@@ -39,7 +39,7 @@ export default function FormPropsTextFields() {
       <AddressBox style={{position:"absolute",left:"25%"}}>
           <div style={{display:"flex",flexDirection:"column",marginLeft:"0%",marginBottom:"20px",marginTop:"10px"}}>
           <CallIcon/>      
-          <h3 style={{position:"absolute",top:"-2%",left:"8%"}}>Contact details</h3>
+          <h4 style={{position:"absolute",top:"1%",left:"8%"}}>Contact details</h4>
           <TextField ref={ref1}
           required
           id="standard-required"
@@ -60,7 +60,7 @@ export default function FormPropsTextFields() {
           </div>
           <div style={{display:"flex",flexDirection:"column",marginLeft:"0%"}}>
           <LocationOnIcon/>
-          <h3 style={{position:"absolute",top:"31%",left:"8%"}}>Address</h3>
+          <h4 style={{position:"absolute",top:"34%",left:"8%"}}>Address</h4>
           <TextField 
           id="standard-read-only-input"
           label="House.no./Building"

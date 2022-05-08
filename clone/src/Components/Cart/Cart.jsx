@@ -47,9 +47,9 @@ export const Cart = ({path,str,id,show,istrue}) => {
     
     <SmallBox>
       <div style={{display:"flex"}}>
-        <h3>Cart</h3>
+        <h4>Cart</h4>
         <hr/>
-        <h3>{cartdata.length} Item</h3>
+        <h4>{cartdata.length} Item</h4>
       </div>
     </SmallBox>
     <Cartnav>
@@ -77,7 +77,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
     {/* <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/> */}
     <Carthr/>
     <div style={{width:"300px",position:"absolute",right:"20%",top:"-20%",lineHeight:"10px"}}>
-      <h3 style={{marginRight:"62%"}}>Price Details</h3>
+      <h4 style={{marginRight:"64%",width:"150px"}}>Price Details</h4>
       <InsideSmall >
         <p>Product Charges</p>
         <p>{total+50}</p>
@@ -110,8 +110,8 @@ export const Cart = ({path,str,id,show,istrue}) => {
         <p>- ₹50</p>
       </InsideSmall>
       <InsideSmall>
-        <h3>Order Total</h3>
-        <p>{total+x11}</p>
+        <h4>Order Total</h4>
+        <p style={{marginTop:"10px"}}>{total+x11}</p>
       </InsideSmall>
     </div>
     <Address length={cartdata.length}>
