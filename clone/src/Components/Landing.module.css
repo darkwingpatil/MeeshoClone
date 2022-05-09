@@ -1,0 +1,240 @@
+.l_box_one{
+    /* border: 2px solid black; */
+    width:85%;
+    height: auto;
+    display: flex;
+    margin:auto;
+    margin-bottom:5%;
+
+}
+
+.l_left_box{
+    flex: 1.1;
+    text-align: left;
+}
+
+.l_right_box{
+    flex: .9;
+    /* border: 1px solid black; */
+}
+
+.l_heading_one{
+    font-size: 38px;
+    line-height: 50px;
+    color: rgb(51, 51, 51);
+    width: 100%;
+    font-weight: bold;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    margin-left: 25px;
+}
+
+.l_heading_two{
+    color: rgb(102, 102, 102);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    font-family: -apple-system, "Helvetica Neue", sans-serif, "Mier Book";
+    margin-left: 25px;
+}
+
+.l_Download_button{
+    display: flex;
+    background-color:rgb(244, 51, 151);
+    padding-left: 25px;
+    justify-content: centre;
+    height: 50px;
+    width: 50%;
+    align-items: center;
+    padding: 15px;
+    border-radius: 4px;
+    margin-left: 25px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+}
+.l_Download_button>img{
+    height:50px;
+    width:50px;
+}
+
+.l_right_box_img{
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.l_down_meesh{
+    margin-left: 10px;
+    letter-spacing:1px;
+    color: white;
+}
+
+/* line cat begins */
+
+.l_cat_line{
+    /* border:2px solid black; */
+    display: flex;
+    width:90%;
+    margin:auto;
+}
+
+.l_cat0{
+    border-bottom:2px solid black;
+    margin: 5%;
+    flex: .7;
+
+}
+
+.l_cat1{
+    font-family: "Mier Bold", sans-serif;
+    font-size: 33px;
+    letter-spacing: 0.5px;
+    flex: 1;
+}
+
+.l_cat2{
+    border-bottom:2px solid black;
+    flex: .7;
+    margin: 5%;
+
+}
+
+ /* box 2 begins */
+/* https://images.meesho.com/images/marketing/1651230310749.webp */
+
+.l_box_two{
+    /* border: 2px solid black; */
+    width: 85%;
+    margin:auto;
+}
+
+.l_imgs_box2{
+    /* border: 2px solid black; */
+    /* style={{ backgroundImage: `url(${`https://images.meesho.com/images/marketing/1651230310749.webp`})` }} */
+    background-image:url(https://images.meesho.com/images/marketing/1651230310749.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: flex-start;
+    border-radius: 8px;
+    margin-bottom:8%;
+}
+
+.b_two_img1{
+    margin-top: 10%;
+    border-radius: 8px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.b_two_img2{
+    margin-top: 20%;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+.b_two_img3{
+    margin-top:20%;
+    border-radius: 8px;
+    margin-right: 10px;
+
+}
+
+/* essentials box */
+
+.l_box_three{
+    /* border:2px solid black; */
+    width: 85%;
+    margin: auto;
+    background-image: url(https://images.meesho.com/images/pow/1629883965347.jpeg);
+    display: flex;
+    margin-bottom:8%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.b_three_div_one{
+    margin: 10% 4% 0% 4%;
+}
+
+.b_three_div2{
+    /* border: solid red; */
+    margin: 10% 2% 0% 2%;
+
+}
+
+.b_three_div3{
+    margin: 10% 2% 0% 2%;
+}
+
+.b_three_div4{
+    margin: 10% 2% 0% 2%;
+}
+
+/* reseller css begins from here */
+
+.l_box_four{
+    /* border: 2px solid red; */
+    width: 85%;
+    margin: auto;
+    background-image: url(https://images.meesho.com/images/pow/download_banner_desktop.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    margin-bottom: 10%;
+}
+
+.l_b4_sub_box{
+    /* border: 1px solid rgb(24, 14, 14); */
+    width: 60%;
+    margin-left: 40%;
+}
+
+.box4_download_imgs{
+    display:flex;
+    justify-content:flex-end;
+    margin-top:25px;
+    margin-bottom:70px;
+    padding-right: 20px;
+    /* border: 1px solid rgb(24, 14, 14); */
+}
+
+.box4_d_img1{
+    width: 19%;
+    height:50px;
+    border-radius: 3px;
+    margin-right: 5px;
+    padding-bottom: 20px;
+
+}
+
+.box4_head1{
+    color: rgb(85, 133, 248);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: right;
+    padding-right: 20px;
+    padding-top: 20px;
+
+}
+
+.box4_head2{
+    color: rgb(244, 51, 151);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 38px;
+    text-align: right;
+    padding-right: 20px;
+}
+
+.box4_head3{
+    color: rgb(244, 51, 151);
+    font-weight: 700;
+    font-size: 38px;
+    text-align: right;
+    padding-right: 20px;
+    
+}

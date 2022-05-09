@@ -13,6 +13,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
   console.log(istrue,"kya dekha")
   // const state=useSelector((state)=>state.cartdata)
   const {cartdata,total}=useSelector((state)=>state.cart)
+  
   // const[total,setotal]=React.useState()
   const dispatch=useDispatch()
   const[del,setdel]=React.useState(false)
@@ -39,7 +40,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
     <>
     <div>
         <Cartnav>
-         <Tag>meesho</Tag>
+         <Tag onClick={()=>navigate("/")}>meesho</Tag>
          <Wrapper><HorizontalLabelPositionBelowStepper id={id?id:0}/></Wrapper>
        </Cartnav>
     <hr style={{backgroundColor:"lightgray",height: "1px", border: 0,}}/>
@@ -49,30 +50,35 @@ export const Cart = ({path,str,id,show,istrue}) => {
       <div style={{display:"flex"}}>
         <h4>Cart</h4>
         <hr/>
-        <h4>{cartdata.length} Item</h4>
+        <h4>{(cartdata!=null)?cartdata.length:0} Item</h4>
       </div>
     </SmallBox>
     <Cartnav>
-    <div>
       {
-        cartdata.map((ele)=>{
-          return(
-            <CartData key={uuidv4()}>
-            <div><img src={ele.imgUrl}/></div>
-            <div>
-            <h3>{ele.type}</h3>
-            <p>Qty:{ele.qty}</p>
-            <p>₹ {ele.rate}</p>
-            </div>
-            <div>
-              <button onClick={()=>{startUpdate(ele)
-              setHidden(false)}}>Edit</button>
-            </div>
-            </CartData>
-          )
-        })
+        cartdata!=null?
+        <div>
+        {
+          cartdata.map((ele)=>{
+            return(
+              <CartData key={uuidv4()}>
+              <div><img src={ele.imgUrl}/></div>
+              <div>
+              <h3>{ele.type}</h3>
+              <p>Qty:{ele.qty}</p>
+              <p>₹ {ele.rate}</p>
+              </div>
+              <div>
+                <button onClick={()=>{startUpdate(ele)
+                setHidden(false)}}>Edit</button>
+              </div>
+              </CartData>
+            )
+          })
+        }
+      </div>:
+      <div></div>
       }
-    </div>
+   
 
     {/* <hr style={{height:"220px",position:"absolute",right:"45%",top:"-15%"}}/> */}
     <Carthr/>
@@ -114,7 +120,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
         <p style={{marginTop:"10px"}}>{total+x11}</p>
       </InsideSmall>
     </div>
-    <Address length={cartdata.length}>
+    <Address length={(cartdata!=null)?cartdata.length:0}>
     <button  onClick={()=>{
           if(istrue==true)
           {
@@ -140,7 +146,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
             <CartData1>
             <div><img src={UpdateCart.imgUrl}/></div>
             <div>
-            <h3>{UpdateCart.type}</h3>
+            <h5 style={{width:"150px",marginTop:"5%"}}>{UpdateCart.type}</h5>
             <p>₹ {UpdateCart.rate}</p>
             <span style={{display:"flex",justifyContent:"center"}}><p style={{marginTop:"3%",marginRight:"10px"}}>Size</p>
             <select style={{height:"50%"}}>

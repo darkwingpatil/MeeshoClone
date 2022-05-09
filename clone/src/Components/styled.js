@@ -340,7 +340,7 @@ left:37.5%;
 
 export const Profile=styled.div`
 height:200px;
-width:250px;
+width:300px;
 // margin-left:80%;
 z-index:2;
 ${(props)=>props.see?`

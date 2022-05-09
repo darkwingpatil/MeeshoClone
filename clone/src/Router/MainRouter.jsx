@@ -12,15 +12,19 @@ import{Orderdone} from "../Components/Cart/Orderdone"
 import {Login} from "../Components/Signup/Login"
 import{Otp} from "../Components/Signup/Loginotp"
 import {PrivateRouter} from "../Router/PrivateRouter"
+import Productdetails11 from "../Pdp/Productdetail11"
 import Example from "./Nav"
 export const MainRouter=()=>{
 return(
     <Routes>
         <Route path="/" element={<Productdetail/>}></Route>
-        <Route path="/men" element={<Mendetail/>}></Route>
-        <Route path="/women" element={<Womendetail/>}></Route>
+        <Route path="/men/*" element={<Mendetail/>}></Route>
+        <Route path="/men/:name/:id" element={<Productdetails11/>}></Route>
+        <Route path="/women/*" element={<Womendetail/>}></Route>
+        <Route path="/women/:name/:id" element={<Productdetails11/>}></Route>
         <Route path="/nav" element={<Example/>}></Route>
-        <Route path="/kids" element={<Kidsdetail/>}></Route>
+        <Route path="/kids/*" element={<Kidsdetail/>}></Route>
+        <Route path="/kids/:name/:id" element={<Productdetails11/>}></Route>
         <Route path="/login/*" element={<Login/>}></Route>
         <Route path="/login/:name" element={<Otp/>}></Route>
         <Route path="/cart/*" element={<PrivateRouter><Cart/></PrivateRouter>}></Route>

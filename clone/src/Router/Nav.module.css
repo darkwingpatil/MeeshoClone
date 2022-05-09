@@ -1,0 +1,164 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(77, 74, 74);
+}
+.download{
+    margin-left: 300px;
+
+}
+.navbar{
+    width: 100vw;
+    height: 60px;
+    padding: 2rem 0;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    top: 0;
+    z-index: 10;
+    background-color: whitesmoke;
+}
+.leftNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50vw;
+    /* border:1px solid black ; */
+
+}
+.jenny{
+    display: flex;
+    justify-content: space-between;
+}
+.logoMeesho>img{
+    width: 250px;
+    height: 50px;
+    margin-right: 50px;
+    cursor: pointer;
+    /* border: 1px solid rebeccapurple; */
+}
+.searchNavbar{
+    border: 1px solid rgb(77, 74, 74);
+    height: 80px;
+    width: 350px;
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: space-between; */
+    border-radius: 8px;
+
+}
+/* .InputNavbar{
+    border: none;
+        height: 180px;
+    width: 150px;
+    height: 50px; 
+     outline: none;
+    margin-left: -30px;
+
+} */
+/* .logoMeesho{
+    width: 100px;
+    height: 100px;
+} */
+.input{
+    margin-left: -60%;
+    border-radius: 10px;
+    height: 120px;
+    width: 130px;
+}
+
+.RightNav>ul{
+    display: flex;
+    width: inherit;
+    height: inherit;
+    margin: .5rem 0;
+    /* border: 1px solid red; */
+}
+.RightNav>ul>li{
+   text-align: center ;
+   padding: 5px;
+   margin: 0 1rem;
+    font-size: 16px;
+    font-weight: 600;
+    /* color: rgb(77, 74, 74);; */
+
+}
+.RightNav>a{
+    font-size: 50px;
+}
+.RightNav>ul>li>a>i{
+    display: block;
+}
+.signupHover , .playStoreHover{
+    display: none;
+    position: absolute;
+    right: 50px;
+    margin: auto;
+    background-color: #f9f9f9;
+    width: 100vw;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    /* z-index: 11111; */
+}
+.playStoreHover{
+right: 300px;
+}
+/* #signupHover */
+.cartHhover:hover #signupHover , #download:hover #playStoreHover{
+    display: block;
+    width: 17vw;
+    height: 16vw;
+    border-radius: 0 0 20px 20px;
+    z-index: 5;
+    /* padding: 1rem; */
+  }
+  .signupHover>div>a ,#playStoreHover>div>a{
+    display: block;
+    margin-bottom: 1rem;
+    /* border: 1px solid black; */
+  }
+  .signupHover>div>a:nth-child(2){
+      font-size: 20px;
+      font-weight: bold;
+      /* background-color: blue; */
+  }
+  .signupHover>div>a:nth-child(3){
+      font-size: 12px;
+      font-weight: bold;
+      /* background-color: blue; */
+  }
+  .signupHover>div>a:nth-child(4){
+      /* font-size: 1px; */
+      font-weight: bold;
+      border: 1px solid black;
+      border-radius: 8px;
+      width: 80%;
+      padding: .5rem 0rem;
+      margin: auto;
+  }
+  #search{
+      color: blue;
+  }
+  
+.input{
+      width: 350px;
+      height: 50px;
+  }
+  .signupHover>div>a>i{
+    margin-right:1rem ;
+    font-size: 30px;
+  }
+  .playStoreHover>div img{
+    width: 80%;
+    border-radius: 5px;
+  }
+  .playStoreHover>div>a:nth-child(2){
+    font-size: 20px;
+    font-weight: bold;
+    /* border: 1px solid red; */
+  }
+

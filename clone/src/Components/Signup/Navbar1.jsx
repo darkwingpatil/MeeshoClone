@@ -21,7 +21,7 @@ function Navbar1() {
               
 
               <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Women Western
+                Jewellery & Accessories
               </a>
               </div>
 
@@ -36,38 +36,7 @@ function Navbar1() {
                 <a className="dropdown-item" href="#">Jumpsuits</a>
 
               </div>
-              <div>
-              <a className="dropdown-item1" href="#">Jeans</a>
-                <a className="dropdown-item" href="#">Jeggings</a>
-                <a className="dropdown-item" href="#">Palazzos</a>
-                <a className="dropdown-item" href="#">Shorts</a>
-                <a className="dropdown-item" href="#">Skrits</a>
-
-              </div>
-              <div>
-              <a className="dropdown-item1" href="#">Innerwear</a>
-                <a className="dropdown-item" href="#">Bra</a>
-                <a className="dropdown-item" href="#">Briefs</a>
-              </div>
-
-              
-
-              <div>
-              <a className="dropdown-item1" href="#">Sleepwear</a>
-                <a className="dropdown-item" href="#">Nightsuits</a>
-                <a className="dropdown-item" href="#">babydolls</a>
-              </div>  
-                </div>
-                </div>
-                </li>
-                <li className="nav-item dropdown">
-                  
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Jewellery & Accessories
-              </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
-              <div className="d-flex align-items-stretch ">
-              <div>
+            <div>
               <a className="dropdown-item1" href="#" >Jewellery</a>
                 <a className="dropdown-item" href="#">Jewellery Set</a>
                 <a className="dropdown-item" href="#">Mangalsutras</a>
@@ -84,7 +53,56 @@ function Navbar1() {
               <a className="dropdown-item" href="#">Sunglasses</a>
               <a className="dropdown-item" href="#">Socks</a>
 
+              </div> 
+                </div>
+                </div>
+                </li>
+                <li className="nav-item dropdown">
+                  
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Women Western
+              </a>
+              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="d-flex align-items-stretch ">
+              {/* <div>
+              <a className="dropdown-item1" href="#" >Jewellery</a>
+                <a className="dropdown-item" href="#">Jewellery Set</a>
+                <a className="dropdown-item" href="#">Mangalsutras</a>
+                <a className="dropdown-item" href="#">Studs</a>
+                <a className="dropdown-item" href="#">Rings</a>
+                <a className="dropdown-item" href="#">Anklets</a>
+                <a className="dropdown-item" href="#">Bangles</a>
               </div>
+              <div>
+              <a className="dropdown-item1" href="#">Women Accessory</a>
+              <a className="dropdown-item" href="#">Bags</a>
+              <a className="dropdown-item" href="#">Watches</a>
+              <a className="dropdown-item" href="#">Hair Accessories</a>
+              <a className="dropdown-item" href="#">Sunglasses</a>
+              <a className="dropdown-item" href="#">Socks</a>
+
+              </div> */}
+                <div>
+              <Link className="dropdown-item1" to="/women">Jeans</Link>
+                <Link className="dropdown-item" to="/women">Jeggings</Link>
+                <Link className="dropdown-item" to="/women">Palazzos</Link>
+                <Link className="dropdown-item" to="/women">Shorts</Link>
+                <Link className="dropdown-item" to="/women">Skrits</Link>
+
+              </div>
+              <div>
+              <Link className="dropdown-item1" to="/women">Innerwear</Link>
+                <Link className="dropdown-item" to="/women">Bra</Link>
+                <Link className="dropdown-item" to="/women">Briefs</Link>
+              </div>
+
+              
+
+              <div>
+              <Link className="dropdown-item1" to="/women">Sleepwear</Link>
+                <Link className="dropdown-item" to="/women">Nightsuits</Link>
+                <Link className="dropdown-item" to="/women">babydolls</Link>
+              </div>  
               <div>
               <a className="dropdown-item1" href="#"></a>
               </div>
@@ -100,37 +118,37 @@ function Navbar1() {
               <div className="dropdown-menu" aria-labelledby="mensstyle">
               <div className="d-flex align-items-stretch">
               <div>
-              <a className="dropdown-item1" href="http://localhost:3006/" >Top</a>
-                <a className="dropdown-item" href="http://localhost:3006/">All Top Wear</a>
-                <a className="dropdown-item" href="http://localhost:3006/">Tshirts</a>
-                <a className="dropdown-item" href="http://localhost:3006/">Shirts</a>
+              <Link className="dropdown-item1" to="/men" >Top</Link>
+                <Link className="dropdown-item" to="/men">All Top Wear</Link>
+                <Link className="dropdown-item" to="/men">Tshirts</Link>
+                <Link className="dropdown-item" to="/men">Shirts</Link>
               </div>
               <div>
-              <a className="dropdown-item1" href="#">Bottom Wear </a>
-              <a className="dropdown-item" href="#">Track Pants</a>
-              <a className="dropdown-item" href="#">Jeans</a>
-              <a className="dropdown-item" href="#">Trousers </a>
+              <Link className="dropdown-item1" to="/men">Bottom Wear </Link>
+              <Link className="dropdown-item" to="/men">Track Pants</Link>
+              <Link className="dropdown-item" to="/men">Jeans</Link>
+              <Link className="dropdown-item" to="/men">Trousers </Link>
               </div>
 
               <div>
-              <a className="dropdown-item1" href="#">Men Accsessories </a>
-              <a className="dropdown-item" href="#"> Watches</a>
-              <a className="dropdown-item" href="#">Belts</a>
-              <a className="dropdown-item" href="#">Wallets </a>
-              <a className="dropdown-item" href="#">Jewellery </a>
-              <a className="dropdown-item" href="#">Sunglasses </a>
-              <a className="dropdown-item" href="#">Bags </a>
+              <Link className="dropdown-item1" to="/men">Men Accsessories </Link>
+              <Link className="dropdown-item" to="/men"> Watches</Link>
+              <Link className="dropdown-item" to="/men">Belts</Link>
+              <Link className="dropdown-item" to="/men">Wallets </Link>
+              <Link className="dropdown-item" to="/men">Jewellery </Link>
+              <Link className="dropdown-item" to="/men">Sunglasses </Link>
+              <Link className="dropdown-item" to="/men">Bags </Link>
               </div>
               <div>
-              <a className="dropdown-item1" href="#">Men Footwear </a>
-              <a className="dropdown-item" href="#"> Sports Shoes</a>
-              <a className="dropdown-item" href="#">Formal Shoes</a>
-              <a className="dropdown-item" href="#">Sandals</a>
+              <Link className="dropdown-item1" to="/men">Men Footwear </Link>
+              <Link className="dropdown-item" to="/men"> Sports Shoes</Link>
+              <Link className="dropdown-item" to="/men">Formal Shoes</Link>
+              <Link className="dropdown-item" to="/men">Sandals</Link>
               </div>
               <div>
-              <a className="dropdown-item1" href="#">Ethnic Wear </a>
-              <a className="dropdown-item" href="#"> Men Kurtas</a>
-              <a className="dropdown-item" href="#">Ethnic Jackets</a>
+              <Link className="dropdown-item1" to="/men">Ethnic Wear </Link>
+              <Link className="dropdown-item" to="/men"> Men Kurtas</Link>
+              <Link className="dropdown-item" to="/men">Ethnic Jackets</Link>
               </div>
 
               </div>
@@ -232,20 +250,20 @@ function Navbar1() {
               <div className="dropdown-menu" aria-labelledby="mensstyle">
               <div className="d-flex align-items-stretch">
               <div>
-              <a className="dropdown-item1" href="#" >Toys & Accessories</a>
-                <a className="dropdown-item" href="#">Soft Toys</a>
-                <a className="dropdown-item" href="#">Footwear</a>
-                <a className="dropdown-item" href="#">Stationery</a>
-                <a className="dropdown-item" href="#">Watches</a>
+              <Link className="dropdown-item1" to="/kids" >Toys & Accessories</Link>
+                <Link className="dropdown-item" to="/kids">Soft Toys</Link>
+                <Link className="dropdown-item" to="/kids">Footwear</Link>
+                <Link className="dropdown-item" to="/kids">Stationery</Link>
+                <Link className="dropdown-item" to="/kids">Watches</Link>
 
               </div>
               <div>
-              <a className="dropdown-item1" href="#">Baby Care </a>
-              <a className="dropdown-item" href="#">All Baby Care</a>
+              <Link className="dropdown-item1" to="/kids">Baby Care </Link>
+              <Link className="dropdown-item" to="/kids">All Baby Care</Link>
               </div>
               <div>
-              <a className="dropdown-item1" href="#">Infant 0-2 Years </a>
-              <a className="dropdown-item" href="#">Rompers </a>
+              <Link className="dropdown-item1" to="/kids">Infant 0-2 Years </Link>
+              <Link className="dropdown-item" to="/kids">Rompers </Link>
               </div>
               </div>
 
