@@ -6,6 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useSelector,useDispatch } from 'react-redux'
 import {currcart} from "../Redux/Cart/Action"
 import { useNavigate } from 'react-router-dom';
+import List1 from "./Signup/Footer"
 export const Kidsdetail = () => {
 const dispatch=useDispatch()
 const navigate=useNavigate()
@@ -16,7 +17,8 @@ console.log(data,"inpdp now seeing")
 //     dispatch(currcart(ele))
 // }
   return (
-    <Grid>
+      <>
+       <Grid>
         {
             data.data.map((ele)=>{
                 return(
@@ -38,5 +40,8 @@ console.log(data,"inpdp now seeing")
             })
         }
     </Grid>
+    <List1/>
+      </>
+   
   )
 }

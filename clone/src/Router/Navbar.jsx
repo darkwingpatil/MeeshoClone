@@ -80,7 +80,7 @@ export const Navbar = () => {
     
             <div className={styles.jenny}>
     <div className={styles.leftNav}>
-        <div className={styles.logoMeesho}><img src="https://2ballz.in/assets/images/meesho.png" alt="WebsiteLogo"/></div>
+        <div className={styles.logoMeesho}><img src="https://2ballz.in/assets/images/meesho.png" alt="WebsiteLogo" onClick={()=>navigate("/")}/></div>
         <div className="App">
         {/* <i className="fa-solid fa-magnifying-glass fa-xl"></i> */}
         {/* <div>SearchIcon</div> */}
@@ -96,7 +96,7 @@ export const Navbar = () => {
 
 
 {
-  hidesea?<div style={{position:"absolute",top:"100%",left:"23.5%",background:"white",height:"300px",width:"300px",zIndex:4,border:"1px solid lightgrey"}} onMouseLeave={()=>sethidesea(false)}>
+  hidesea?<div style={{position:"absolute",top:"100%",left:"25%",background:"white",height:"300px",width:"300px",zIndex:4,border:"1px solid lightgrey"}} onMouseLeave={()=>sethidesea(false)}>
   {
     mydata.map((ele)=>{
       return <div style={{border:"1px solid lightgray"}}>{ele}</div>

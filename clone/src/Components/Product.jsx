@@ -10,6 +10,7 @@ import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import{isAuth} from "../Redux/Profile/Action"
 import{showlogin} from "../Redux/Profile/Action"
 import styles from "./Landing.module.css"
+import List1 from "./Signup/Footer"
 export const Productdetail = () => {
 const dispatch=useDispatch()
 const state=useSelector((state)=>state.cart)
@@ -50,7 +51,7 @@ const [showsign,setsign]=React.useState(false)
 
         <>
     {/* box one */}
-    <div className={styles.l_box_one} onMouseEnter={()=>dispatch(showlogin(false))}>
+    <div className={styles.l_box_one}>
         <div className={styles.l_left_box}>
           <h1 className={styles.l_heading_one}>Lowest Prices</h1>
           <h1 className={styles.l_heading_one}>Best Quality Shopping</h1>
@@ -203,8 +204,8 @@ const [showsign,setsign]=React.useState(false)
         }
     </Grid>
     <Grid onMouseEnter={()=>dispatch(showlogin(false))}>
-    {
-            data.data.map((ele)=>{
+        {
+            data.jeans.map((ele)=>{
                 return(
                     <div key={uuidv4()} onClick={()=>clickeddata(ele)}>
                         <img src={ele.imgUrl}/>
@@ -224,7 +225,7 @@ const [showsign,setsign]=React.useState(false)
             })
         }
     </Grid>
-
+    <List1/>
       </Alldone>
     
   )
