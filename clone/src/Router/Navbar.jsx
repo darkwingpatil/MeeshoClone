@@ -21,8 +21,10 @@ export const Navbar = () => {
   const navigate=useNavigate()
   const [showsign,setsign]=React.useState(false)
   if(navbar==true)
+
   return (
     <div>
+
         <Link to={"/"} onMouseEnter={()=>setsign(false)}></Link>
         {/* <Link to={"/login"}>Login</Link> */}
         <button style={{border:"none",background:"none"}} onMouseEnter={()=>{setsign(true)
@@ -32,29 +34,6 @@ export const Navbar = () => {
           navigate("/cart")
           
         }}onMouseEnter={()=>setsign(false)}><CustomizedBadges/></button>
-{/* <Profile see={showsign} onMouseLeave={()=>setsign(false)}>
-          <h3 style={{textAlign:"left",marginLeft:"5px"}}>Hello User</h3>
-          <p style={{textAlign:"left",marginLeft:"5px"}}>{auth?`+91 ${number}`:"To access your Meesho account"}</p>
-          {
-            auth?
-            <div></div>
-            :
-            <Profilebutton onClick={()=>{
-              navigate("/login")
-            }}>Sign Up</Profilebutton>
-          }
-          
-          <hr style={{width:"90%"}}/>
-          <InputsSign><ShoppingBagIcon/>
-          <h3 style={{marginTop:"0%"}}>My Orders</h3>
-          </InputsSign>
-          {
-            auth?
-            <Profilebutton onClick={()=>dispatch(isAuth(false))}>Logout</Profilebutton>
-            :
-            <div></div>
-          }
-        </Profile> */}
     </div>
     
   )

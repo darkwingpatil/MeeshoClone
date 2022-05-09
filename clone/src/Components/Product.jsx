@@ -50,7 +50,7 @@ const [showsign,setsign]=React.useState(false)
 
         <>
     {/* box one */}
-    <div className={styles.l_box_one}>
+    <div className={styles.l_box_one} onMouseEnter={()=>dispatch(showlogin(false))}>
         <div className={styles.l_left_box}>
           <h1 className={styles.l_heading_one}>Lowest Prices</h1>
           <h1 className={styles.l_heading_one}>Best Quality Shopping</h1>
