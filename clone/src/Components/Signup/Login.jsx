@@ -21,7 +21,7 @@ export const Login = () => {
   return (
       <div div className="h-screen bg-rose-100 py-20 px-3">
         <Mobile>
-            <img src="orderimg.png"/>
+            <img src="orderimg.png" style={{height:"200px"}}/>
             <h3>Sign Up to view your cart items</h3>
             <InputsSign>
              <TextFieldSizes/>

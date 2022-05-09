@@ -140,7 +140,7 @@ export const Cart = ({path,str,id,show,istrue}) => {
             <CartData1>
             <div><img src={UpdateCart.imgUrl}/></div>
             <div>
-            <h3>{UpdateCart.type}</h3>
+            <h5 style={{width:"150px",marginTop:"5%"}}>{UpdateCart.type}</h5>
             <p>₹ {UpdateCart.rate}</p>
             <span style={{display:"flex",justifyContent:"center"}}><p style={{marginTop:"3%",marginRight:"10px"}}>Size</p>
             <select style={{height:"50%"}}>
