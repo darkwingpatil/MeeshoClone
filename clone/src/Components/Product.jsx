@@ -205,11 +205,11 @@ const [showsign,setsign]=React.useState(false)
     </Grid>
     <Grid onMouseEnter={()=>dispatch(showlogin(false))}>
         {
-            data.jeans.map((ele)=>{
+            data.data.map((ele)=>{
                 return(
                     <div key={uuidv4()} onClick={()=>clickeddata(ele)}>
                         <img src={ele.imgUrl}/>
-                        <p style={{color:"#b7a499"}}>{ele.type}</p>
+                        <p style={{color:"#b7a499"}} id="uu1">{ele.type}</p>
                         <div style={{display:"flex",justifyContent:"center",gap:"5px"}}>
                         <h3>₹{ele.rate}</h3>
                         <p style={{color:"#b7a499"}}>onwards</p>

@@ -40,7 +40,9 @@ export const Cart = ({path,str,id,show,istrue}) => {
     <>
     <div>
         <Cartnav>
-         <Tag onClick={()=>navigate("/")}>meesho</Tag>
+         <Tag onClick={()=>{
+           dispatch(hidenavbar(true))
+           navigate("/")}}>meesho</Tag>
          <Wrapper><HorizontalLabelPositionBelowStepper id={id?id:0}/></Wrapper>
        </Cartnav>
     <hr style={{backgroundColor:"lightgray",height: "1px", border: 0,}}/>

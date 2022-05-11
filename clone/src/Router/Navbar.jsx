@@ -6,7 +6,7 @@ import CustomizedBadges from "../Components/Cart/Carticon"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import PermIdentityIcon from '@mui/icons-material/PermIdentity';
 import { useDispatch, useSelector } from 'react-redux'
-import{Profile,Profilebutton,InputsSign} from "../Components/styled"
+import{Profile,Profilebutton,InputsSign,Mynavbar} from "../Components/styled"
 import { useNavigate } from 'react-router-dom'
 import{hidenavbar} from "../Redux/Cart/Action"
 import{isAuth} from "../Redux/Profile/Action"
@@ -76,23 +76,24 @@ export const Navbar = () => {
   const [showsign,setsign]=React.useState(false)
   if(navbar==true)
   return (
-    <div style={{position:"relative"}}>
+    <Mynavbar >
     
             <div className={styles.jenny}>
     <div className={styles.leftNav}>
-        <div className={styles.logoMeesho}><img src="https://2ballz.in/assets/images/meesho.png" alt="WebsiteLogo" onClick={()=>navigate("/")}/></div>
+        <div className={styles.logoMeesho}><img src="https://2ballz.in/assets/images/meesho.png" alt="WebsiteLogo" onClick={()=>{
+          navigate("/")}}/></div>
         <div className="App">
         {/* <i className="fa-solid fa-magnifying-glass fa-xl"></i> */}
         {/* <div>SearchIcon</div> */}
 
 
 
-<input type="text" className={styles.input} placeholder="Try Saree,Kurti or Search Product Code" onChange={e=>{
+<input type="text" className={styles.input} id="input11" placeholder="Try Saree,Kurti or Search Product Code" onChange={e=>{
   
   setSearchTerm(e.target.value)
   Alldata()
   sethidesea(true)}} />
-<SearchIcon style={{position:"absolute",left:"42%",marginTop:"15px"}}/>
+<SearchIcon style={{position:"absolute",left:"42%",marginTop:"15px"}} id="tag11"/>
 
 
 {
@@ -111,9 +112,9 @@ export const Navbar = () => {
 
 </div>     
     </div>
-    <div className={styles.RightNav}>
+    <div className={styles.RightNav} id="down11">
         <ul>
-            <li className={styles.download}><a href="#"><i class="bi bi-phone-fill"></i> Download 
+            <li className={styles.download} id="oneu11" ><a href="#"><i class="bi bi-phone-fill"></i> Download 
             <div className={styles.playStoreHover}>
                 <div>
             <a href="#"> Download From- </a>  
@@ -126,7 +127,7 @@ export const Navbar = () => {
                  </div>
             </div>
          </a></li>
-            <li><a href="#"><i class="bi bi-shop"></i>Become a Supplier</a></li>
+            <li id="oneu"><a href="#"><i class="bi bi-shop"></i>Become a Supplier</a></li>
             {/* <li className={styles.cartHhover}><a href="#"><i class="fa-solid fa-user"></i> Profile  */}
                     <div className={styles.signupHover}>
                         <div>
@@ -141,7 +142,7 @@ export const Navbar = () => {
     </div>
     <Link to={"/"} onMouseEnter={()=>setsign(false)}></Link>
         {/* <Link to={"/login"}>Login</Link> */}
-        <button style={{border:"none",background:"none",position:"absolute",left:"86%",marginTop:"12px"}} onMouseEnter={()=>{setsign(true)
+        <button id="butt1" style={{border:"none",background:"none",position:"absolute",left:"86%",marginTop:"12px"}} onMouseEnter={()=>{setsign(true)
         dispatch(showlogin(true))}}  ><PermIdentityIcon/></button>
         <button style={{border:"none",background:"none",position:"absolute",left:"88%",marginTop:"5px"}} onClick={()=>{
           dispatch(hidenavbar(false))
@@ -151,7 +152,7 @@ export const Navbar = () => {
 
     </div>
 
-    </div>
+    </Mynavbar>
     
   )
   return(
