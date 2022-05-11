@@ -9,7 +9,7 @@ const List1=()=>{
             <div id="playGoogleStore">
                 <h1>Shop Non-Stop on Meesho</h1>
                 <p>Trusted By More Than  1 Crore Indians Cash on Delivery | Free Delivery</p>
-                <div><img src="https://www.earfy.net/wp-content/uploads/2016/03/google-play-logo.jpg" alt="google" />
+                <div id="seeing"><img src="https://www.earfy.net/wp-content/uploads/2016/03/google-play-logo.jpg" alt="google" />
                 <img src="https://www.pikpng.com/pngl/b/144-1445686_app-store-available-on-apple-google-store-logo.png" alt="google"/></div>
             </div>
    

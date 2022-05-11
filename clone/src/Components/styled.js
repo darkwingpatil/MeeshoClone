@@ -6,6 +6,7 @@ display:flex;
 justify-content:space-betweem;
 position:relative;
 width:100%;
+
 `
 export const Wrapper=styled.div`
 width:40%;
@@ -26,9 +27,21 @@ grid-template-columns: repeat(4,1fr);
 gap:10px;
 position:relative;
 
+p{
+    text-align:center;
+}
 div>img{
     width:300px;
     height:300px;
+}
+
+
+@media (min-width:400px) and (max-width:1000px){
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media (min-width:100px) and (max-width:399px){
+    grid-template-columns: repeat(1,1fr);
 }
 `
 
@@ -44,6 +57,9 @@ position:relative;
 export const SmallBox=styled.div`
 width:10%;
 margin-left:20%;
+@media (min-width:100px) and (max-width:1280px){
+    display:none;
+}
 `
 
 export const CartData=styled.div`
@@ -74,6 +90,10 @@ button{
 div>img{
     width:80px;
     height:80px;
+}
+
+@media (min-width:100px) and (max-width:1280px){
+    display:none;
 }
 
 `
@@ -172,12 +192,14 @@ right:20%;
 
 ${(props)=>props.length==1?`
 bottom:-170%;`:`bottom:-28%;`}
+
 `
 export const AddressBox=styled.div`
 height:auto;
 width:400px;
 border:1px solid lightgray;
 margin:auto;
+
 
 `
 export const AddressBoxButton=styled.button`
@@ -377,3 +399,44 @@ background:#038d63;
 border-radius:20px;
 
 `
+
+export const Mynavbar=styled.div`
+position:"relative";
+width:auto;
+@media (min-width:400px) and (max-width:1000px)
+{
+    #input11{
+        display:none;
+    }
+    #tag11{
+        display:none;
+    }
+    #oneu{
+        display:none;
+    }
+    #oneu11{
+        margin-right:200px;
+    }
+
+}
+
+@media (min-width:100px) and (max-width:399px)
+{
+    #input11{
+        display:none;
+    }
+    #tag11{
+        display:none;
+    }
+    #oneu{
+        display:none;
+    }
+    #oneu11{
+        display:none;
+    }
+    #butt1{
+        display:none;
+    }
+}
+`
+
