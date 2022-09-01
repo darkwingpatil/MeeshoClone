@@ -3,6 +3,15 @@ import { Link } from 'react-router-dom'
 
 function Navbar1() {
  
+const myref1=React.useRef()
+const myref2=React.useRef()
+const myref3=React.useRef()
+const myref4=React.useRef()
+const myref5=React.useRef()
+const myref6=React.useRef()
+const myref7=React.useRef()
+
+const[include,setinncludes]=React.useState([])
 
   return (
     <div classNameName="App">
@@ -12,24 +21,42 @@ function Navbar1() {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul className="navbar-nav">
+          <ul className="navbar-nav" onMouseLeave={()=>{
+                            myref1.current.style.display="none"
+                            myref2.current.style.display="none"
+                            myref3.current.style.display="none"
+                            myref4.current.style.display="none"
+                            myref5.current.style.display="none"
+                            myref6.current.style.display="none"
+                            myref7.current.style.display="none"
+          }} >
             <li className="nav-item active">
               {/* <a className="nav-item dropdown" href="#">Home <span className="sr-only">(current)</span></a> */}
             </li>
-            <li className="nav-item dropdown">
-            <div className="d-flex justify-content-around" id="jennystyle">
+            <li className="nav-item dropdown" onMouseLeave={()=>{
+                myref1.current.style.display="none"
+                myref2.current.style.display="none"
+                myref3.current.style.display="none"
+                myref4.current.style.display="none"
+                myref5.current.style.display="none"
+                myref6.current.style.display="none"
+                myref7.current.style.display="none"
+            }}>
+        
               
 
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" onMouseEnter={()=>{
+                myref1.current.style.display="flex"
+              }}  >
                 Jewellery & Accessories
               </a>
-              </div>
+    
 
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div ref={myref1} className="testingapp dropdown-menu" aria-labelledby="mensstyle">
               <div className="d-flex align-items-stretch" id="jennystyle1">
-              <div>
-              <a className="dropdown-item1" >Topwear</a>
-
+              <div >
+             
+               <Link to="/men"><a className="dropdown-item1"  style={{color:"#f43397"}}>Topwear</a></Link>
                 <Link to="/men"><a className="dropdown-item" >Dresses</a></Link>
                 <Link to="/men"><a className="dropdown-item" >Sweater</a></Link>
 
@@ -57,12 +84,22 @@ function Navbar1() {
                 </div>
                 </div>
                 </li>
-                <li className="nav-item dropdown">
+                <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
                   
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink"   onMouseEnter={()=>{
+                  myref2.current.style.display="flex"
+              }}>
               Women Western
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref2} >
               <div className="d-flex align-items-stretch ">
               {/* <div>
               <a className="dropdown-item1" href="#" >Jewellery</a>
@@ -111,11 +148,21 @@ function Navbar1() {
               </div>
             </li>
 
-              <li className="nav-item dropdown">
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" onMouseEnter={()=>{
+                  myref4.current.style.display="flex"
+              }}>
               Men
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref4}>
               <div className="d-flex align-items-stretch">
               <div>
               <Link className="dropdown-item1" to="/men" >Top</Link>
@@ -156,11 +203,21 @@ function Navbar1() {
               </div>
             </li>
 
-            <li className="nav-item dropdown">
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" onMouseEnter={()=>{
+                  myref3.current.style.display="flex"
+              }}>
               Beauty & Health
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref3}>
               <div className="d-flex align-items-stretch">
               <div>
               <a className="dropdown-item1" href="#" >Make up</a>
@@ -181,11 +238,21 @@ function Navbar1() {
 
               </div>
             </li>
-            <li className="nav-item dropdown">
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" onMouseEnter={()=>{
+                  myref5.current.style.display="flex"
+              }}>
               Bags & Footwear  
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref5}>
               <div className="d-flex align-items-stretch">
               <div>
               <a className="dropdown-item1" href="#" >Women Footwear</a>
@@ -211,11 +278,21 @@ function Navbar1() {
 
               </div>
             </li>
-            <li className="nav-item dropdown">
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" onMouseEnter={()=>{
+                  myref6.current.style.display="flex"
+              }}>
               Home & Kitchen  
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref6}>
               <div className="d-flex align-items-stretch">
               <div>
               <a className="dropdown-item1" href="#" >Home Furnishing</a>
@@ -232,22 +309,26 @@ function Navbar1() {
               <a className="dropdown-item" href="#">Showpieces</a>
 
               </div>
-              <div>
-              <a className="dropdown-item1" href="#">Kitchen & Dining </a>
-              <a className="dropdown-item" href="#">Kitchen Storage </a>
-              <a className="dropdown-item" href="#">Cookware & Bakeware </a>
-
-              </div>
               </div>
 
               </div>
               
             </li>
-            <li className="nav-item dropdown">
-              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li className="nav-item dropdown" onMouseLeave={()=>{
+                  myref1.current.style.display="none"
+                  myref2.current.style.display="none"
+                  myref3.current.style.display="none"
+                  myref4.current.style.display="none"
+                  myref5.current.style.display="none"
+                  myref6.current.style.display="none"
+                  myref7.current.style.display="none"
+            }}>
+              <a className="navbar-brand" href="#" id="navbarDropdownMenuLink"  onMouseEnter={()=>{
+                  myref7.current.style.display="flex"
+              }} >
              Kids
               </a>
-              <div className="dropdown-menu" aria-labelledby="mensstyle">
+              <div className="dropdown-menu testingapp" aria-labelledby="mensstyle" ref={myref7}>
               <div className="d-flex align-items-stretch">
               <div>
               <Link className="dropdown-item1" to="/kids" >Toys & Accessories</Link>
@@ -257,14 +338,7 @@ function Navbar1() {
                 <Link className="dropdown-item" to="/kids">Watches</Link>
 
               </div>
-              <div>
-              <Link className="dropdown-item1" to="/kids">Baby Care </Link>
-              <Link className="dropdown-item" to="/kids">All Baby Care</Link>
-              </div>
-              <div>
-              <Link className="dropdown-item1" to="/kids">Infant 0-2 Years </Link>
-              <Link className="dropdown-item" to="/kids">Rompers </Link>
-              </div>
+
               </div>
 
               </div>

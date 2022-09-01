@@ -36,8 +36,8 @@ a{
     justify-content: space-between;
 }
 .logoMeesho>img{
-    width: 250px;
-    height: 50px;
+ 
+    height: 60px;
     margin-right: 50px;
     cursor: pointer;
     /* border: 1px solid rebeccapurple; */

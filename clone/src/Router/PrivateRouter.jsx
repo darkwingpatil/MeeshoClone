@@ -13,3 +13,5 @@ export const PrivateRouter = ({children}) => {
       <Navigate to="/login" state={location.pathname} replace/>
   )
 }
+
+{/* <a href="https://iconscout.com/icons/google" target="_blank">Google Icon</a> by <a href="https://iconscout.com/contributors/icon-mafia">Icon Mafia</a> on <a href="https://iconscout.com">IconScout</a> */}
