@@ -5,12 +5,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { useSelector,useDispatch } from 'react-redux'
 import {currcart} from "../Redux/Cart/Action"
 import { useNavigate } from 'react-router-dom'
-import{Profile,Profilebutton,InputsSign,Alldone,Childdel,Chilrating} from "./styled"
+import{Profile,Profilebutton,InputsSign,Alldone,Childdel,Chilrating,Aftersub,AfterCont} from "./styled"
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
 import{isAuth} from "../Redux/Profile/Action"
 import{showlogin} from "../Redux/Profile/Action"
 import styles from "./Landing.module.css"
 import List1 from "./Signup/Footer"
+
+
 export const Productdetail = () => {
 const dispatch=useDispatch()
 const state=useSelector((state)=>state.cart)
@@ -97,44 +99,7 @@ const [showsign,setsign]=React.useState(false)
     </div>
 
     {/* essentials box */}
-    <div className={styles.l_box_three}>
 
-      <div className={styles.b_three_div_one}>
-        <h1>Essentials</h1>
-        <img src="https://images.meesho.com/images/marketing/1651230232416.webp" alt="" />
-      </div>
-
-      <div className={styles.b_three_div2}>
-        <div className={styles.box_three_img1}>
-          <img src="https://images.meesho.com/images/marketing/1651230112989.webp" alt="" />
-        </div>
-
-        <div className={styles.b_three_btn1}>
-          <img src="https://images.meesho.com/images/marketing/1651230071039.webp" alt="" />
-        </div>
-      </div>
-
-      <div className={styles.b_three_div3}>
-        <div className={styles.box_three_img2}>
-          <img src="https://images.meesho.com/images/marketing/1651230219898.webp" alt="" />
-        </div>
-
-        <div className={styles.b_three_btn2}>
-          <img src="https://images.meesho.com/images/marketing/1651230198152.webp" alt="" />
-        </div>
-      </div>
-
-      <div className={styles.b_three_div4}>
-        <div className={styles.box_three_img3}>
-          <img src="https://images.meesho.com/images/marketing/1651230181930.webp" alt="" />
-        </div>
-
-        <div className={styles.b_three_btn3}>
-          <img src="https://images.meesho.com/images/marketing/1651230164934.webp" alt="" />
-        </div>
-      </div>
-
-    </div>
 
     {/* reseller */}
     <div className={styles.l_box_four}>
@@ -157,12 +122,13 @@ const [showsign,setsign]=React.useState(false)
 
     </div>
     </>
+    <Aftersub >Products for you</Aftersub>
       <Grid onMouseEnter={()=>dispatch(showlogin(false))} >
       
         {
             data.mensTshirt.map((ele)=>{
                 return(
-                    <div key={uuidv4()} onClick={()=>clickeddata(ele)}>
+                    <AfterCont key={uuidv4()} onClick={()=>navigate(`/men/mensTshirt/${ele.id}`)}>
                         <img src={ele.imgUrl}/>
                         <p style={{color:"#b7a499"}}>{ele.type}</p>
                         <div style={{display:"flex",justifyContent:"center",gap:"5px"}}>
@@ -175,7 +141,7 @@ const [showsign,setsign]=React.useState(false)
                         <div style={{marginTop:"5px"}}><p style={{color:"#b7a499"}}>{ele.review}</p></div>
                         </div>
                         {/* <button onClick={()=>clickeddata(ele)}>AddtoCart</button> */}
-                    </div>
+                    </AfterCont>
                 )
             })
         }
@@ -185,7 +151,7 @@ const [showsign,setsign]=React.useState(false)
         {
             data.jeans.map((ele)=>{
                 return(
-                    <div key={uuidv4()} onClick={()=>clickeddata(ele)}>
+                    <AfterCont key={uuidv4()} onClick={()=>navigate(`/women/jeans/${ele.id}`)}>
                         <img src={ele.imgUrl}/>
                         <p style={{color:"#b7a499"}}>{ele.type}</p>
                         <div style={{display:"flex",justifyContent:"center",gap:"5px"}}>
@@ -198,7 +164,7 @@ const [showsign,setsign]=React.useState(false)
                         <div style={{marginTop:"5px"}}><p style={{color:"#b7a499"}}>{ele.review}</p></div>
                         </div>
                         {/* <button onClick={()=>clickeddata(ele)}>AddtoCart</button> */}
-                    </div>
+                    </AfterCont>
                 )
             })
         }
@@ -207,7 +173,7 @@ const [showsign,setsign]=React.useState(false)
         {
             data.data.map((ele)=>{
                 return(
-                    <div key={uuidv4()} onClick={()=>clickeddata(ele)}>
+                    <AfterCont key={uuidv4()}  onClick={()=>navigate(`/kids/data/${ele.id}`)}>
                         <img src={ele.imgUrl}/>
                         <p style={{color:"#b7a499"}} id="uu1">{ele.type}</p>
                         <div style={{display:"flex",justifyContent:"center",gap:"5px"}}>
@@ -220,7 +186,7 @@ const [showsign,setsign]=React.useState(false)
                         <div style={{marginTop:"5px"}}><p style={{color:"#b7a499"}}>{ele.review}</p></div>
                         </div>
                         {/* <button onClick={()=>clickeddata(ele)}>AddtoCart</button> */}
-                    </div>
+                    </AfterCont>
                 )
             })
         }

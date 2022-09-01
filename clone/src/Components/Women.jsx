@@ -1,7 +1,7 @@
 import React from 'react'
 import data from "../db.json"
 import{Grid} from "./styled"
-import{Profile,Profilebutton,InputsSign,Alldone,Childdel,Chilrating} from "./styled"
+import{Profile,Profilebutton,InputsSign,Alldone,Childdel,Chilrating,Aftersub,AfterCont} from "./styled"
 import { v4 as uuidv4 } from 'uuid';
 import { useSelector,useDispatch } from 'react-redux'
 import {currcart} from "../Redux/Cart/Action"
@@ -23,7 +23,7 @@ console.log(data,"inpdp now seeing")
         {
             data.jeans.map((ele)=>{
                 return(
-                    <div key={uuidv4()} onClick={()=>navigate(`/women/jeans/${ele.id}`)}>
+                    <AfterCont key={uuidv4()} onClick={()=>navigate(`/women/jeans/${ele.id}`)}>
                          <img src={ele.imgUrl}/>
                         <p style={{color:"#b7a499"}}>{ele.type}</p>
                         <div style={{display:"flex",justifyContent:"center",gap:"5px"}}>
@@ -36,7 +36,7 @@ console.log(data,"inpdp now seeing")
                         <div style={{marginTop:"5px"}}><p style={{color:"#b7a499"}}>{ele.review}</p></div>
                         </div>
                         {/* <button onClick={()=>clickeddata(ele)}>AddtoCart</button> */}
-                    </div>
+                    </AfterCont>
                 )
             })
         }

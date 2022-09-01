@@ -212,7 +212,17 @@ height:40px;
 width:90%;
 
 `
-
+export const Aftersub=styled.h1`
+font-weight: 900;
+text-decoration: underline;
+margin-bottom: 2%;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+`
+export const AfterCont=styled.div`
+border: 1px solid rgb(226, 224, 224);
+cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+`
 export const AddressAll=styled.div`
 .Bucket{
     position:absolute;
